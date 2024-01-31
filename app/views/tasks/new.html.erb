@@ -1,0 +1,29 @@
+<h2>New Task</h2>
+
+<%= form_with model: @task, local: true do |form| %>
+  <div class="center">
+    <div>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+    <div>
+      <%= form.label :due_date %>
+      <%= form.date_select :due_date %>
+    </div>
+    <div>
+      <%= form.label :priority %>
+      <%= form.number_field :priority %>
+    </div>
+    <div>
+      <%= form.label :status %>
+      <%= form.select :status, Task.statuses.keys.map { |status| [status.titleize, status] } %>
+    </div>
+    <div>
+      <%= form.submit "Create Task" %>
+    </div>
+  </div>
+<% end %>

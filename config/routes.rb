@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     sign_up: 'signup'
   }
 
+  # Tasks
+  resources :tasks
+
   # Defines the root path route ("/")
-  root to: 'rails/health#show'
+  root 'tasks#index'
 end

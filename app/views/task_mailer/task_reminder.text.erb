@@ -1,0 +1,10 @@
+Hello, <%= @user.email %>!
+
+You have created task:
+Task title: <%= @task.title %>
+Description: <%= @task.description %>
+Due date: <%= @task.due_date.strftime('%d %B %Y') %>
+Priority: <%= @task.priority %>
+Status: <%= @task.status %>
+
+Thank you!

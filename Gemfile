@@ -31,6 +31,9 @@ gem 'devise', '~> 4.9.2'
 # Pagination
 gem 'pagy'
 
+# Mailer for local usage
+gem 'letter_opener', group: :development
+
 # Swagger Api Documentation
 gem 'rswag-api'
 gem 'rswag-ui'

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Task created</title>
+</head>
+<body>
+<h1>Hello, <%= @user.email %>!</h1>
+<p>You have created task:</p>
+<p>Title: <%= @task.title %></p>
+<p>Description: <%= @task.description %></p>
+<p>Due date: <%= @task.due_date.strftime('%d %B %Y') %></p>
+<p>Priority: <%= @task.priority %></p>
+<p>Status: <%= @task.status %></p>
+<p>Thank you!</p>
+</body>
+</html>
