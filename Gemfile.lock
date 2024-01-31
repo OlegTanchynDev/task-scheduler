@@ -312,7 +312,7 @@ DEPENDENCIES
   redis (>= 4.0.1)
   rswag-api
   rswag-ui
-  rubocop-rails (~> 2.23, >= 2.23.1)
+  rubocop-rails (~> 2.19, >= 2.19.1)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
