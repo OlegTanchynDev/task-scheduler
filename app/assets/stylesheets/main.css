@@ -87,6 +87,7 @@ table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
+    margin-top: 50px;
 }
 
 table th, table td {
@@ -111,4 +112,17 @@ table th {
 
 table td {
     vertical-align: top;
+}
+
+/* pagination */
+.pagy-nav {
+  margin: 1rem auto; text-align: center;
+}
+
+.pagy-nav a {
+    text-decoration: none;
+}
+
+.page {
+    display: inline-block;
 }

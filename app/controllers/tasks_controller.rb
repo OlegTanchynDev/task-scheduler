@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
-class TasksController < ApplicationController
+class TasksController < BaseController
   def index
-    @tasks = Task.all
+    if params[:search].present?
+      search_query = "%#{params[:search]}%"
+      statuses = Task.statuses.select { |key, _value| key.include?(params[:search]) }.values
+      @pagy, @tasks = pagy(Task.where('title ILIKE ? OR description ILIKE ? OR due_date::text ILIKE ? OR status IN (?)',
+                                      search_query, search_query, search_query, statuses))
+    else
+      @pagy, @tasks = pagy(Task.all, items: 5)
+    end
   end
 
   def new
