@@ -35,6 +35,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Submission
+  config.hosts << '114d-95-215-158-37.ngrok-free.app'
+
   # Action Mailer with LetterOpener
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true

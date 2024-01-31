@@ -14,4 +14,3 @@ class CreateTasks < ActiveRecord::Migration[7.1]
     end
   end
 end
-drop_table :shop_builder_products

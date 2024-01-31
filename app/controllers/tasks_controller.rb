@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class TasksController < BaseController
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
+
   def index
     if params[:search].present?
       search_query = "%#{params[:search]}%"
